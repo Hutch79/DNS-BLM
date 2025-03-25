@@ -18,4 +18,8 @@
         <Using Include="Xunit"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\DNS-BLM.Application\DNS-BLM.Application.csproj" />
+    </ItemGroup>
+
 </Project>
