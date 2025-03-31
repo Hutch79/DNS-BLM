@@ -1,7 +1,9 @@
 using DNS_BLM.Application;
+using DNS_BLM.Application.Services;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Tests.Mocks;
 
 namespace Tests;
 
@@ -18,7 +20,8 @@ public class DatabaseTestCase : IAsyncLifetime
             .AddUserSecrets<DatabaseTestCase>()
             .Build();
         services.AddHttpContextAccessor();
-        
+
+        services.AddSingleton<INotificationService, MockNotificationService>();
         services.Configure<IConfigurationRoot>(ConfigurationRoot);
         services.AddLogging();
         
