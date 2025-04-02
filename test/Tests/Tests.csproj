@@ -20,6 +20,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\DNS-BLM.Application\DNS-BLM.Application.csproj" />
+      <ProjectReference Include="..\..\src\DNS-BLM.Infrastructure\DNS-BLM.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
